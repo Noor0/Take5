@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "unit-whitelist": ["em", "rem", "%", "s", "px", "vw", "vh", "deg", "dpi"],
+    "indentation": ["tab", { "severity": "warning" } ]
+  }
+}

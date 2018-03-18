@@ -1,0 +1,42 @@
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}	
+}
+
+@mixin btn-variation($bg, $fg) {
+	background-color: $bg;
+	color: $fg;
+
+	&::after {
+		background-color: $bg;
+	}
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin respond($br) {
+	@if $br == phone {
+		@media only screen and (max-width: 43.75em) { @content };	//	600px
+	}
+
+	@if $br == tab-port {
+		@media only screen and (max-width: 56.25em) { @content };		//	900px
+	}
+
+	@if $br == tab-land {
+		@media only screen and (max-width: 75em) { @content };		//	1200em
+	}
+
+	@if $br == big-scr {
+		@media only screen and (min-width: 112.5em) { @content };		//	1800px
+	}
+}
+

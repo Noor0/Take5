@@ -1,0 +1,43 @@
+.u-center-text {
+	text-align: center !important;
+}
+
+.u-center-elements {
+	margin: 0 auto !important;
+}
+
+.u-margin-bottom-big {
+	margin-bottom: 8rem !important;
+
+	@include respond(tab-port) {
+		margin-bottom: 4rem !important;
+	}
+}
+
+.u-margin-bottom-medium {
+	margin-bottom: 4rem !important;
+
+	@include respond(tab-port) {
+		margin-bottom: 3rem !important;
+	}
+}
+
+.u-margin-bottom-small {
+	margin-bottom: 1.5rem !important;
+}
+
+.u-gutter {
+	padding-right: 3rem;
+}
+
+.u-gutter-l {
+	padding-left: 3rem;
+}
+
+.u-gutter-eq {
+	padding: 0 1.5rem !important;
+}
+
+.u-index-front {
+	z-index: 1 !important;
+}

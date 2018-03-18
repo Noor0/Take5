@@ -1,0 +1,61 @@
+.row {
+	@include clearfix;
+	
+	max-width: 114rem;
+	margin: 0 auto;
+	
+	&::after {
+		content: "";
+		clear: both;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: $gutter-v;
+
+		@include respond(tab-port) {
+			margin-bottom: $gutter-v-small !important;
+		}
+	}
+
+	@include respond(tab-port) {
+		max-width: 50rem;
+		padding: 0 2rem;
+	}
+	
+	[class^="col"] {
+		float: left;
+
+		@include respond(tab-port) {
+			width: 100% !important;
+			margin: 0 !important;
+			margin-bottom: $gutter-v-small !important;
+		}
+	}
+
+	.col-1 {
+		width:25%;
+	}
+	.col-2 {
+		width:50%;
+	}
+	.col-3 {
+		width:75%;
+	}
+	.col-4 {
+		width:100%;
+	}
+
+	.off-1 {
+		margin-left: 25%;
+	}
+	.off-2 {
+		margin-left: 50%;
+	}
+	.off-3 {
+		margin-left: 75%;
+	}
+	.off-4 {
+		margin-left: 100%;
+	}
+
+}
